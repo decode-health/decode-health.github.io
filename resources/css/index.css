@@ -1,0 +1,43 @@
+@font-face { font-family: Comfortaa; src: url(../assets/Comfortaa-Regular.ttf); }
+
+body {
+    background-image: linear-gradient(to bottom right, #ff1616, #004aad);
+    background-attachment: fixed;
+}
+h1 {
+    font-family: Comfortaa;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+    padding-top: 10%
+    
+}
+p {
+    font-family: Comfortaa;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20%;
+    background-image: linear-gradient(to top left, #004aad, #ff1616);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Comfortaa;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 32px;
+    transition-duration: 0.25s;
+}
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
