@@ -2,19 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decodehealth static webpage" content="width=device-width, initial-scale=1.0">
     <title>decodehealth</title>
-    <!-- Additional head elements (stylesheets, scripts, etc.) can go here -->
-</head>
-<body style="background-color: #004aad;">
-    <!-- Content of your website goes here -->
-    <h1 style="color: #ffffff;">decodehealth</h1>
-    
-    <!-- Additional body elements (paragraphs, images, links, etc.) can go here -->
-    <p>harnessing AI for health</p>
-    <button>Click here for more...</button>
-    <p>hi this is raj</p>
-    <p>sakin is cool</p>
 
-    <!-- Optional: JavaScript inclusion -->
-    <script src="y
+    <!-- Add the stylesheet -->
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+
+    <style>
+        /* Add your existing CSS styles here */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: Comfortaa;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+        }
+
+        .section1 {
+            background-image: linear-gradient(to bottom right, #ff1616, #004aad);
+        }
+
+        .section2 {
+            background-image: linear-gradient(to bottom right, #004aad, #00ff00);
+            height: 100vh;
+            transform: translateY(100%);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .section.active .section2 {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div id="section1" class="section section1">
+        <div class="content">
+            <!-- Company name -->
+            <h1>decodehealth</h1>
+            
+            <!-- Additional Info -->
+            <p>harnessing AI for health</p>
+        </div>
+    </div>
+
+    <div id="section2" class="section section2">
+        <div class="content">
+            <!-- Content for the second "page" -->
+            <p>Additional content goes here...</p>
+        </div>
+    </div>
+
+    <!-- Additional content to make the page scrollable -->
+
+
+    <script>
+        // JavaScript to handle scrolling and section transitions
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.section');
+
+            function setActiveSection() {
+                const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+                sections.forEach(section => {
+                    const offsetTop = section.offsetTop;
+                    const offsetBottom = offsetTop + section.offsetHeight;
+
+                    if (scrollPosition >= offsetTop && scrollPosition <= offsetBottom) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+            }
+
+            // Initial set of active section
+            setActiveSection();
+
+            // Listen for scroll events
+            window.addEventListener('scroll', setActiveSection);
+        });
+    </script>
+</body>
+</html>
+
+
