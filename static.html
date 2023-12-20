@@ -13,10 +13,11 @@
         body {
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .section {
-            height: 100vh;
+            height: 50vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -28,19 +29,36 @@
             transition: height 0.5s ease-in-out;
         }
 
-        .section1 {
-            background-image: linear-gradient(to bottom right, #ff1616, #004aad);
-        }
 
         .section2 {
             background-image: linear-gradient(to bottom right, #004aad, #00ff00);
-            height: 100vh;
+            height: 50vh; /* Match the height of section1 */
             transform: translateY(100%);
             transition: transform 0.5s ease-in-out;
+            position: relative;
+            z-index: 1; /* Set z-index to make it appear on top */
         }
 
         .section.active .section2 {
             transform: translateY(0);
+        }
+
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            color: white;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .section.active .parallax-content {
+            transform: translate(-50%, -50%) translateY(-100%);
         }
     </style>
 </head>
@@ -56,14 +74,17 @@
     </div>
 
     <div id="section2" class="section section2">
-        <div class="content">
+        <div class="parallax-content">
             <!-- Content for the second "page" -->
-            <p>Additional content goes here...</p>
+            <h2>Problem Statement</h2>
+            <p>Health literacy is a person’s ability to understand general healthcare information...</p>
+
+            <h2>Potential Solution</h2>
+            <p>We aim to create an application that houses medical information at truly accessible reading levels for everyone...</p>
         </div>
     </div>
 
     <!-- Additional content to make the page scrollable -->
-
 
     <script>
         // JavaScript to handle scrolling and section transitions
@@ -94,5 +115,13 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
