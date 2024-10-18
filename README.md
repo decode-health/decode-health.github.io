@@ -1,2 +1,2 @@
 # website
-decodehealth website --> [https://www.decodehealth.xyz](https://www.decodehealth.xyz)
+decodehealth website --> [https://decode-health.github.io](https://decode-health.github.io)
