@@ -1,0 +1,97 @@
+/* General Styling for Contact Section */
+.contact {
+    padding: 50px 20px;       /* Spacing around the form */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;        /* Ensure the section fills the viewport height */
+    box-sizing: border-box;
+}
+
+
+.contact form {
+    background-color: #fff;  /* White background for the form */
+    padding: 30px 40px;      /* Form padding */
+    border-radius: 10px;     /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    /*max-width: 500px;        Limit form width */
+    width: 100%;             /* Responsive width */
+    box-sizing: border-box;  /* Include padding in width */
+}
+
+
+/* Form Header */
+.contact h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Input Box Container */
+.input-box {
+    margin-bottom: 20px;     /* Spacing between input fields */
+}
+
+
+.input-box label {
+    display: block;          /* Ensure the label is on its own line */
+    font-size: 1rem;         /* Standard font size */
+    color: #555;             /* Medium gray for labels */
+    margin-bottom: 5px;      /* Space between label and input */
+}
+
+
+/* Input Fields */
+.field {
+    width: 100%;             /* Full width of container */
+    padding: 12px;           /* Input padding */
+    font-size: 1rem;         /* Standard font size */
+    color: #333;             /* Dark text color for inputs */
+    border: 1px solid #ccc;  /* Light gray border */
+    border-radius: 5px;      /* Rounded corners */
+    box-sizing: border-box;  /* Include padding in width */
+}
+
+
+.field:focus {
+    outline: none;           /* Remove default outline */
+    border-color: #004AAD;   /* Highlight border color on focus */
+    box-shadow: 0 0 5px rgba(0, 74, 173, 0.3); /* Subtle glow */
+}
+
+
+/* Textarea */
+.mess {
+    height: 150px;           /* Height for message field */
+    resize: none;            /* Prevent resizing */
+}
+
+
+/* Submit Button */
+button {
+    background-color: #004AAD; /* Primary color */
+    color: #fff;              /* White text */
+    font-size: 1rem;          /* Standard font size */
+    padding: 12px 20px;       /* Button padding */
+    border: none;             /* Remove default border */
+    border-radius: 5px;       /* Rounded corners */
+    cursor: pointer;          /* Pointer cursor */
+    width: 100%;              /* Full width of form */
+    text-transform: uppercase;/* Capitalized text for style */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+
+button:hover {
+    background-color: #00337A; /* Darker shade on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact form {
+        padding: 20px;         /* Reduce padding for smaller screens */
+    }
+}
