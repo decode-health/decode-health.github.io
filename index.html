@@ -7,11 +7,211 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>decodeHealth</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" id="logo-img"/>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel-1">
+        <div class="section-container">
+            <div class="text-container">
+                <h1 class="section-header">decodeHealth</h1>
+                <p class="section-description">
+                    Intelligent health
+                </p>
+                <button id="section-button">Try decodeHealth</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-2">
+        <div class="panel-2-container">
+            <div class="panel-2-top">
+                <h2>Importance of health literacy</h2>
+                <p>$349 billion cost of low health literacy on US economy</p>
+            </div>
+
+            <div class="panel-2-bottom">
+                <div class="column">
+                    <div class="row-image">
+                        <i class="fa-solid fa-graduation-cap fa-2xl"></i>
+                    </div>
+                    <div class="row-text">
+                        <p>45% without college degrees</p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="row-image">
+                        <i class="fa-solid fa-notes-medical fa-2xl"></i>
+                    </div>
+                    <div class="row-text">
+                        <p>40% with chronic conditions</p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="row-image">
+                        <i class="fa-solid fa-wheelchair fa-2xl"></i>
+                    </div>
+                    <div class="row-text">
+                        <p>58M are 65+ years old</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-3">
+        <div class="panel-3-container">
+            <div class="panel-3-left">
+                <h2>Explore Features</h2>
+                <p>
+                    Discover our features by interacting with the button or exploring
+                    the carousel!
+                </p>
+
+                <div class="button-row">
+                    <button
+                        class="feature-button" onclick="handleButtonClick(0)"
+                    >
+                        Disorder Lookup
+                    </button>
+                </div>
+                <div class="button-row">
+                    <button
+                        class="feature-button" onclick="handleButtonClick(1)"
+                    >
+                        Treatment Guidance
+                    </button>
+                </div>
+                <div class="button-row">
+                    <button
+                        class="feature-button" onclick="handleButtonClick(2)"
+                    >
+                        Prescription Guidance
+                    </button>
+                </div>
+                <div class="button-row">
+                    <button
+                        class="feature-button" onclick="handleButtonClick(3)"
+                    >
+                        Simplify Text
+                    </button>
+                </div>
+            </div>
+
+            <div class="panel-3-carousel">
+                <div class="carousel-content" id="carouselContent">
+                    
+                </div>
+                <div class="carousel-buttons">
+                    <button onclick="handlePrev()" class="carousel-button">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button onclick="handleNext()" class="carousel-button">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-4">
+        <section id="contact-form">
+            
+        </section>
+    </div>
+
+    <div id="divider"></div>
+
+    <div id="panel-5">
+        <div id="panel-5-container">
+            <div id="panel-5-column">
+                <div id="panel-5-row">
+                    <h3>decodeHealth App</h3>
+                </div>
+                <div id="panel-5-row">
+                    <a href="#">Purpose</a>
+                </div>
+                <div id="panel-5-row">
+                    <a href="#">How to use tutorial</a>
+                </div>
+                <div id="panel-5-row">
+                    <a href="#">Key Features</a>
+                </div>
+            </div>
+
+            <div id="panel-5-column">
+                <div id="panel-5-row">
+                    <h3>About Us</h3>
+                </div>
+                <div id="panel-5-row">
+                    <a href="about.html">About decodeHealth</a>
+                </div>
+                <div id="panel-5-row">
+                    <a href="#about-us-panel-3">Mission and Values</a>
+                </div>
+                <div id="panel-5-row">
+                    <a href="#about-us-panel-4">Leadership</a>
+                </div>
+            </div>
+
+            <div id="panel-5-column">
+                <div id="panel-5-row">
+                    <h3>Support</h3>
+                </div>
+                <div id="panel-5-row">
+                    <a href="#">Help</a>
+                </div>
+                <div id="panel-5-row">
+                    <a href="#">Contact Us</a>
+                </div>
+                <div id="panel-5-row">
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+
+            <div id="panel-5-column">
+                <div id="panel-5-row">
+                    <h3>Get the App</h3>
+                </div>
+                <div id="panel-5-row">
+                    <button id="panel-5-button">Download on the App Store</button>
+                </div>
+                <div id="panel-5-row">
+                    <button id="panel-5-button">Get it on Google Play</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="footer-links">
+            <a href="#">© 2024 decodeHealth</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div id="footer-social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
