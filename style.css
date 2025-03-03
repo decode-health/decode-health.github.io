@@ -1,0 +1,730 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100vw; /* Ensures it does not exceed the screen width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    box-sizing: border-box; /* Prevents overflowing due to padding */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+}
+
+#logo-img {
+    height: 70px; /* Adjusted for better fitting */
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links {
+    margin-left: auto; /* Pushes navigation to the right */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Makes Home and About appear in a row */
+    gap: 2rem; /* Spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #FF1616;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #004AAD;
+}
+
+/* Ensuring the navbar does not exceed the viewport width */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .nav-links ul {
+        gap: 1rem; /* Reduce gap for smaller screens */
+    }
+}
+
+.overlap-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 1;
+}
+ 
+.panel-1 {
+    background-image: linear-gradient(to bottom right, #ff1616, #004aad);
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-container {
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section-header {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+#section-button {
+    background-color: black;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin-right: 2rem;
+}
+
+#section-button:hover {
+    background-color: #004AAD;
+}
+
+.panel-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+}
+
+.panel-2-container {
+    display: flex;
+    flex-direction: column; /* Stack top and bottom sections */
+    align-items: center; /* Center the sections horizontally */
+    justify-content: center; /* Center the sections within panel-2 */
+    width: 100%;
+    gap: 40px; /* Add spacing between top and bottom sections */
+}
+
+.panel-2-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    text-align: center; /* Center-align text content */
+    padding: 40px 0;
+}
+
+.panel-2-top h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    padding: 0 0 40px 0;
+}
+
+.panel-2-top p {
+    margin-bottom: 15px;
+}
+
+.panel-2-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; /* Distribute items evenly in a row */
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.row {
+    display: flex;
+    gap: 20px; /* Spacing between row items */
+    align-items: center;
+}
+
+.row-image {
+    font-size: 3rem; /* Increase font size for bigger icons */
+    color: #333; /* Optional: you can change the color of the icons */
+    width: 150px; /* Control the width if necessary */
+    height: 150px; /* Control the height if necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 4;
+}
+
+.panel-3-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Ensures space is evenly distributed */
+    gap: 20px;
+}
+
+.panel-3-left {
+    flex: 1; /* Ensures it takes up half of the available width */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    width: 50%; /* Exactly half of the screen */
+}
+
+.panel-3-left h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.panel-3-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Adjusted for spacing */
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center buttons horizontally */
+    width: 50%; /* Ensure buttons fill the width of the row */
+}
+
+.panel-3-carousel {
+    flex: 1; /* Ensures it takes up half of the available width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 50%; /* Exactly half of the screen */
+}
+
+.feature-button {
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #004AAD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel-content {
+    position: relative;
+    width: 60%;
+    height: 80vh;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-panel {
+    padding: 20px;
+    text-align: center;
+    display: none;
+    border-color: #004aad;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.carousel-panel.active {
+    display: block;
+}
+
+.carousel-panel img {
+    width: 40%;
+    max-width: 150px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.carousel-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-button {
+    padding: 10px 20px;
+    background-color: #004AAD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    background-color: #0056b3;
+}
+
+.panel-4 {
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.panel-overlay {
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+}
+
+#about-us-panel-1 {
+    background-image: linear-gradient(to bottom right, #ff1616, #004aad);
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+
+/* Full height container */
+#about-us-section-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Text container */
+#about-us-text-container {
+    text-align: center; /* Center text horizontally within the container */
+    color: white; /* White text for contrast */
+    max-width: 600px; /* Optional: limit the max width of the text */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Section header */
+#about-us-section-header {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+
+/* Section description */
+#about-us-section-description {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+}
+
+
+/* Section button */
+#about-us-section-button {
+    background-color: black;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin-right: 2rem;
+}
+
+
+#about-us-section-button:hover {
+    background-color: #004aad;
+}
+
+
+/* Panel 2 Styling */
+#about-us-panel-2 {
+    padding: 40px;
+    text-align: center;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Ensure header stacks with content below */
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+
+#about-us-panel-2-header {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+/* Centered Content Container */
+#about-us-panel-2-container {
+    display: flex;
+    justify-content: space-evenly; /* Distribute space evenly between items */
+    align-items: center; /* Align items vertically in the center */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    width: 80%; /* Restrict the width for consistent margins */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the container on the screen */
+    gap: 20px; /* Equal spacing between items */
+    box-sizing: border-box;
+}
+
+
+/* Left Column */
+#about-us-panel-2-left,
+#about-us-panel-2-right {
+    flex: 1; /* Equal width */
+    max-width: 30%; /* Prevent columns from taking excessive space */
+    text-align: center; /* Center text within each column */
+}
+
+
+/* Middle Column */
+#about-us-panel-2-middle {
+    flex: 1;
+    max-width: 30%; /* Keep the center column responsive */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center;
+}
+
+
+/* Image in Middle Column */
+#about-us-panel-2-image {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Panel Styling */
+#about-us-panel-partners {
+    width: 100%;
+    padding: 20px 0; /* Keeps it short */
+    background-color: #f8f8f8; /* Light background for contrast */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Header Styling */
+#about-us-panel-partners-header {
+    font-size: 1.8rem; /* Slightly smaller to keep it compact */
+    margin-bottom: 15px; /* Minimal spacing below header */
+}
+
+/* Container for Logos */
+#about-us-panel-partners-container {
+    display: flex;
+    justify-content: center; /* Center logos */
+    align-items: center;
+    width: 100%;
+    padding: 20px 80px; /* Padding on the sides */
+    box-sizing: border-box; /* Ensures padding is considered in width calculation */
+    max-width: 100%; /* Ensure it does not overflow the viewport */
+    margin: 0 auto; /* Ensure it's centered if there are any parent constraints */
+}
+
+/* Row for Logos */
+#about-us-panel-partners-row {
+    display: flex;
+    justify-content: center; /* Keep logos in a row */
+    align-items: center;
+    gap: 50px; /* Increased space between logos */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    background-color: white; /* Set background to white */
+    padding: 20px 0; /* Increased padding on top and bottom */
+}
+
+/* Logo Styling */
+#about-us-panel-partners-logo {
+    height: 80px; /* Bigger height for logos */
+    max-width: 200px; /* Allow logos to be wider */
+    object-fit: contain; /* Ensures proper scaling */
+}
+
+/* Panel 3 Styling */
+#about-us-panel-3 {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh; /* Ensure content fits without overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Prevent padding from affecting width */
+    overflow: hidden; /* Prevent any accidental overflow */
+}
+
+/* Center Header */
+#about-us-panel-3-header {
+    font-size: 2.5rem; /* Slightly smaller to fit better */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Two Columns Layout */
+#about-us-panel-3-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Less space between columns */
+    width: 90%; /* Prevent content from stretching too wide */
+    max-width: 1200px; /* Ensure it never goes too wide on large screens */
+    flex-wrap: wrap; /* Allow responsiveness on smaller screens */
+}
+
+/* Column Styling */
+#about-us-panel-3-column {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduce spacing between rows */
+    min-width: 280px; /* Ensure columns don’t get too narrow */
+}
+
+/* Row Styling */
+#about-us-panel-3-row {
+    font-size: 1rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align elements to the left */
+    gap: 15px; /* Reduce spacing between row elements */
+    margin-bottom: 15px; /* Reduce space between rows */
+    width: 100%;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+
+/* Panel 4 Styling */
+#about-us-panel-4 {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Ensure header stacks with content below */
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center */
+}
+
+/* Center Header */
+#about-us-panel-4-header {
+    font-size: 3rem;
+    margin-bottom: 50px; /* More space below the header */
+    text-align: center;
+}
+
+/* Improved Layout for Two Columns */
+#about-us-panel-4-container {
+    display: flex;
+    justify-content: center; /* Center columns */
+    gap: 80px; /* Increased space between columns */
+    align-items: flex-start; /* Align items at the top */
+    width: 80%; /* Constrain width for better alignment */
+}
+
+/* Column Styling */
+#about-us-panel-4-column {
+    flex: 1; /* Ensures equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content in each column */
+}
+
+/* Row Styling */
+#about-us-panel-4-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items properly */
+    margin-bottom: 40px; /* Increased spacing between rows */
+    gap: 30px; /* More space between image and text */
+    width: 100%; /* Ensure rows take full column width */
+}
+
+/* Image Styling */
+#about-us-panel-4-image {
+    width: 120px; /* Larger image for better visual balance */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Text Styling */
+#about-us-panel-4-text {
+    font-size: 1.2rem; /* Slightly larger for readability */
+    line-height: 1.8;
+    text-align: left; /* Align text to the left */
+    max-width: 350px; /* Prevent text from stretching too wide */
+}
+
+/* Panel 5 Styles */
+#panel-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    padding: 2rem;
+    margin: 2rem;
+    width: 100%;
+}
+
+
+#panel-5-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap; /* Ensure wrapping to prevent overflow */
+}
+
+
+#panel-5-column {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    margin-bottom: 20px; /* Add margin to ensure spacing */
+}
+
+
+#panel-5-row {
+    margin: 10px 0;
+}
+
+
+#panel-5-row a {
+    color: #4D4D4D;
+}
+
+
+#panel-5-button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ensure button takes full width of the column */
+    max-width: 250px; /* Prevent buttons from spilling off */
+    box-sizing: border-box; /* Prevent padding from causing overflow */
+}
+
+
+#panel-5-button:hover {
+    background-color: #333;
+}
+
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+
+#footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+
+#footer-social a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+
+#footer-social a:hover {
+    text-decoration: underline;
+}
+
+
+#divider {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    margin: 2rem 0;
+}
+
+
